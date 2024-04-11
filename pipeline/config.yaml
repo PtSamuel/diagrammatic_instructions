@@ -1,0 +1,41 @@
+camera_intrinsics:
+  high_res_depth:
+    fx: 998.5899
+    fy: 1002.0630
+    cx: 768.0033
+    cy: 668.8884
+  low_res_depth:
+    fx: 399.4360
+    fy: 400.8252
+    cx: 307.2013
+    cy: 267.5554
+apriltag:
+  family: "tag36h11"
+  tag_size: 0.08475
+  R: [[1, 0, 0], [0, 0, 1], [0, -1, 0]]
+  t: [[0], [0], [1.51528]]
+data:
+  high_res_rbg:
+    width: 1600
+    height: 1200
+  low_res_rbg:
+    width: 640
+    height: 480
+ui:
+  width: 640
+  height: 480
+io:
+  high_res_rgb_name: "COLOR_1600x1200.png"
+  low_res_rgb_name: "COLOR_640x480.png"
+  high_res_depth_name: "TRANSFORMED_DEPTH_1600x1200.npy"
+  low_res_depth_name: "TRANSFORMED_DEPTH_640x480.npy"
+  pointcloud_name: "POINTCLOUD.npy"
+  pointcloud_pixels_name: "POINTCLOUD_PIXELS.npy"
+  classifier_name: "CLASSIFIER.pth"
+  constraint_name: "CONSTRAINT.npy"
+  constraint_pixels_name: "CONSTRAINT_PIXELS.npy"
+  constraint_classifier_name: "CONSTRAINT_CLASSIFIER.pth"
+train:
+  batch_size: 1024
+  num_samples: 262144
+  epochs: 2
